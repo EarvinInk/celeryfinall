@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Generated files</h2>
+<ul>
+    {% for dat in files %}
+    <li>
+        <a href="{{dat.file.url}}" download="{{dat.document.url}}">{{dat.filename}}</a>
+        <br>
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
